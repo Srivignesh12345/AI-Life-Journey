@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# 🤖 AI Life Journey
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive single-page React application that tells the story of Artificial Intelligence — from raw data to the future of AGI — through animated, computeristic visuals and a dark terminal aesthetic.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+```
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📸 Sections
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Section | Description |
+|---|---|
+| **Hero** | Landing screen with glitch title animation and typewriter subtitle |
+| **Data** | Scroll-triggered glitch + typewriter card explaining data as AI's fuel |
+| **Learning** | Interactive neural network trainer with animated layers, loss bar, and epoch counter |
+| **Decision** | Terminal-style simulator comparing Human vs AI decision making |
+| **Impact** | Scroll-triggered animated counters for AI impact statistics |
+| **Timeline** | Clickable accordion timeline of 6 major AI milestones with glitch + typewriter |
+| **Journey** | Tabbed step-by-step walkthrough of AI's path with glitch tabs and typewriter cards |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ✨ Animations
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Every section shares a consistent set of computeristic animations:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Glitch effect** — text scrambles through random characters (`@#$%ABCxyz...`) before resolving to the real content
+- **Typewriter effect** — text types out character by character with a blinking `█` cursor
+- **Glow pulse** — borders and dots glow in accent colors on hover and active states
+- **Custom cursor** — a blue dot replaces the default cursor and follows mouse movement
+- **Scroll-triggered** — Data and Impact sections animate when they enter the viewport
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React 19** — UI framework
+- **CSS-in-JS** — all styles written as inline style objects, no external CSS classes
+- **Tailwind CSS 3** — imported but available for utility use
+- **GSAP 3** — available as a dependency for advanced animations
+- **Create React App** — project bootstrapping
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📁 Project Structure
 
-## Learn More
+```
+ai-journey/
+├── public/
+│   └── index.html
+├── src/
+│   ├── sections/
+│   │   ├── Hero.jsx        # Glitch title + typewriter subtitle
+│   │   ├── Data.jsx        # Scroll-triggered glitch + typewriter card
+│   │   ├── Learning.jsx    # Interactive neural network visualizer
+│   │   ├── Decision.jsx    # Human vs AI terminal decision simulator
+│   │   ├── Impact.jsx      # Animated stat counters
+│   │   ├── Timeline.jsx    # AI history accordion with glitch + typewriter
+│   │   └── Journey.jsx     # Tabbed AI journey with glitch tabs + typewriter
+│   ├── App.js              # Root component, custom cursor logic
+│   ├── App.css
+│   └── index.css           # Global styles, cursor, smooth scroll
+├── package.json
+├── tailwind.config.js
+└── postcss.config.js
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ⚙️ Getting Started
 
-### Code Splitting
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Node.js >= 16
+- npm >= 8
 
-### Analyzing the Bundle Size
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+# Clone the repository
+git clone https://github.com/your-username/ai-journey.git
 
-### Making a Progressive Web App
+# Navigate into the project
+cd ai-journey
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Install dependencies
+npm install
 
-### Advanced Configuration
+# Start the development server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Build for Production
 
-### Deployment
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Output will be in the `build/` folder, ready to deploy.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🎨 Design System
+
+| Token | Value |
+|---|---|
+| Background primary | `#0d0d14` |
+| Background secondary | `#0f0f1a` |
+| Card background | `#1a1a2e` |
+| Border default | `#2d2d4e` |
+| Blue accent | `#60a5fa` |
+| Purple accent | `#a78bfa` |
+| Cyan accent | `#67e8f9` |
+| Font | `monospace` / `Courier New` |
+
+---
+
+## 📄 License
+
+MIT — free to use and modify.

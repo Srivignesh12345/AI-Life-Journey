@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import Hero from "./sections/Hero";
+import Data from "./sections/Data";
+import Learning from "./sections/Learning";
+import Decision from "./sections/Decision";
+import Impact from "./sections/Impact";
+import Timeline from "./sections/Timeline";
+import Journey from "./sections/Journey";
 
-function App() {
+export default function App() {
+  useEffect(() => {
+    const cursor = document.querySelector(".cursor");
+    const move = (e) => {
+      if (cursor) {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      }
+    };
+    window.addEventListener("mousemove", move);
+    return () => window.removeEventListener("mousemove", move);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ background: "#0d0d14" }}>
+      <div className="cursor" />
+      <Hero />
+      <Data />
+      <Learning />
+      <Decision />
+      <Impact />
+      <Timeline />
+      <Journey />
     </div>
   );
 }
-
-export default App;
